@@ -1,3 +1,7 @@
+:root {
+    --basis: 43.75;  
+}
+
 html {  
     background-color: darkslateblue;
 }
@@ -19,6 +23,7 @@ body {
 
 .main-container {
     margin: 0;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     min-width: 700px;
@@ -29,9 +34,9 @@ body {
 }
 
 .grid {
-    margin: 0;      
+    margin: 0px;
     display: flex;
-    flex: 1 0 29.16px;
+    flex-basis: var(--basis);
     border: solid 1px;
     box-sizing: border-box;
 }
