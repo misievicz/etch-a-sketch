@@ -40,3 +40,21 @@ body {
     border: solid 1px;
     box-sizing: border-box;
 }
+
+.gridblack {
+    margin: 0px;
+    display: flex;
+    flex-basis: var(--basis);
+    border: solid 1px;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.gridgreen {
+    margin: 0px;
+    display: flex;
+    flex-basis: var(--basis);
+    border: solid 1px;
+    box-sizing: border-box;
+    background-color: rgb(72, 255, 0);
+}
