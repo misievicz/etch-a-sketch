@@ -4,7 +4,7 @@
     --basis: 43.75;  
 }
 html {  
-    background-color: darkslateblue;
+    background-color: #483d8b;
     font-family: 'Silkscreen', cursive;
 }
 body {
@@ -52,6 +52,19 @@ body {
     border: solid 1px;
     box-sizing: border-box;
 }
+#b16 {
+    font-size: x-large;
+    background-color: #483d8b;
+    color: white;
+    border: 0px;
+}
+
+#b64 {
+    font-size: x-large;
+    background-color: #483d8b;
+    color: white;
+    border: 0px;
+}
 input {
     padding: 20px;
     font-family: 'Silkscreen', cursive;
@@ -62,43 +75,15 @@ input {
     flex-direction: column;
     gap: 20px;
 }
-.switch {
-    position: relative;
-    width: 100px;
-    height: 50px;
-}
-.checkbox {
-    opacity: 0;
-}
-.checkbox:checked~.slider:before  {
-    background: #fff;
-    transform: translateX(50px);
-}
-.slider {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border: solid 4px #000;
-    transition: .5s;
-}
-.slider:before {
-    content: '';
-    position: absolute;
-    width: 33px;
-    height: 33px;
-    background: #000;
-    top: 4px;
-    left: 4px;
-    bottom: 4px;
-    transition: .5s;
+.grid-size {
+    margin-bottom: -25px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
 }
 .s16-64 {
     display: flex;
     justify-content: space-around;
-    margin-bottom: -15px;
-}
-.s64 {
-    color: #fff;
+    margin-bottom: 0px;
+    font-size: xx-large;
 }

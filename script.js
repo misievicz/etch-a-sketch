@@ -1,4 +1,4 @@
-function red() {
+function rgb() {
   return "rgb(" + Math.floor(Math.random() * 256) + "," + 56 + "," + 220 + ")";
 }
 
@@ -37,31 +37,34 @@ function reset() {
   }
 }
 
-document.querySelector("button").addEventListener("click", function (event) {
+document.getElementById("b16").addEventListener("click", function (event) {
   reset();
   makeGrid(16);
   changeSize(16);
   makeColor(currentColor);
 });
 
-document.getElementById("#btns1").addEventListener("click", function (event) {
+document.getElementById("b64").addEventListener("click", function (event) {
   reset();
   makeGrid(64);
   changeSize(64);
   makeColor(currentColor);
 });
 
-let b2 = document.getElementById("#btns2");
-b2.addEventListener("click", function (e) {
-  reset();
-  makeGrid(16);
-  makeColor(currentColor);
+document.getElementById("btns1").addEventListener("click", function (event) {
+    makeColor(rgb());
+    changeMode(rgb())
 });
 
-let b3 = document.getElementById("#btns3");
-b3.addEventListener("click", function (e) {
+document.getElementById("btns2").addEventListener("click", function (event) {
   makeColor("white");
   changeMode("white");
 });
 
-window.onload = makeGrid(16), makeColor("white");
+document.getElementById("btns3").addEventListener("click", function (event) {
+  reset();
+  makeGrid(newSize);
+  makeColor(currentColor);
+});
+
+window.onload = makeGrid(16), changeSize(16), makeColor("white");   
