@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 :root {
     --basis: 43.75;  
 }
-
 html {  
     background-color: darkslateblue;
     font-family: 'Silkscreen', cursive;
 }
-
 body {
     margin: 0px;  
     
@@ -19,7 +16,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .main {
     margin: 0px;
     margin-right: 140px;
@@ -28,7 +24,6 @@ body {
     justify-content: center;
     gap: 100px;
 }
-
 .title {
     display: flex;
     justify-content: center;
@@ -39,7 +34,6 @@ body {
     font-size: 55px;
     color: rgb(233, 26, 164);
 }
-
 .main-container {
     margin: 0;
     padding: 8px;
@@ -51,9 +45,6 @@ body {
     max-height: 700px;
     border: dashed 6px black;
 }
-
-
-
 .grid {
     margin: 0px;
     display: flex;
@@ -61,7 +52,6 @@ body {
     border: solid 1px;
     box-sizing: border-box;
 }
-
 input {
     padding: 20px;
     font-family: 'Silkscreen', cursive;
@@ -83,7 +73,6 @@ input {
 .checkbox:checked~.slider:before  {
     background: #fff;
     transform: translateX(50px);
-
 }
 .slider {
     position: absolute;
