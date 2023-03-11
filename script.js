@@ -1,5 +1,5 @@
 const main = document.querySelector('.main-container');
-let number = 16;
+let number = 20;
 let gridBasis = 700 / number;
 let gridBasisString = gridBasis.toString();
 gridBasisString += "px";
@@ -25,6 +25,6 @@ for (let i = 0; i < number * number; i++) {
 
 function red() {
     return (
-      "rgb(" + Math.floor(Math.random() * 256) + "," + 56 + "," + 200 + ")"
+      "rgb(" + Math.floor(Math.random() * 256) + "," + 56 + "," + 220 + ")"
     );
 }

@@ -1,37 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root {
     --basis: 43.75;  
 }
 
 html {  
     background-color: darkslateblue;
+    font-family: 'Silkscreen', cursive;
 }
 
 body {
-    margin: 0;
-    height: 100%;
+    margin: 0px;  
     
+}
+.master {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .main {
-    margin: 0;
+    margin: 0px;
     display: flex;
-    min-height: 100vh;
-    position: relative;
     align-items: center;
     justify-content: center;
+    gap: 100px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 5px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 55px;
+    color: rgb(233, 26, 164);
 }
 
 .main-container {
     margin: 0;
-    padding: 10px;
+    padding: 8px;
     display: flex;
     flex-wrap: wrap;
     min-width: 700px;
     max-width: 700px;
     min-height: 700px;
     max-height: 700px;
-    border: solid 2px black;
+    border: dashed 6px black;
 }
+
+
 
 .grid {
     margin: 0px;
@@ -41,20 +61,46 @@ body {
     box-sizing: border-box;
 }
 
-.gridblack {
-    margin: 0px;
-    display: flex;
-    flex-basis: var(--basis);
-    border: solid 1px;
-    box-sizing: border-box;
-    background-color: black;
+.btns {
+    padding: 20px;
+    font-family: 'Silkscreen', cursive;
+    font-weight: bold;
 }
-
-.gridgreen {
-    margin: 0px;
+.btns-left {
     display: flex;
-    flex-basis: var(--basis);
-    border: solid 1px;
-    box-sizing: border-box;
-    background-color: rgb(72, 255, 0);
+    flex-direction: column;
+    gap: 20px;
+}
+.switch {
+    position: relative;
+    width: 100px;
+    height: 50px;
+}
+.checkbox {
+    opacity: 0;
+}
+.checkbox:checked~.slider:before  {
+    background: #fff;
+    transform: translateX(50px);
+
+}
+.slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: solid 4px #000;
+    transition: .5s;
+}
+.slider:before {
+    content: '';
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    background: #000;
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    transition: .5s;
 }
