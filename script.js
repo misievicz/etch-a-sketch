@@ -1,7 +1,3 @@
-function rgb() {
-  return "rgb(" + Math.floor(Math.random() * 256) + "," + 56 + "," + 220 + ")";
-}
-
 const main = document.querySelector(".main-container");
 let cell = main.children;
 
@@ -23,48 +19,49 @@ function makeGrid(number) {
   }
 }
 function makeColor(color) {
-  for (let i = 0; i < cell.length; i++) {
-    cell[i].addEventListener("mouseover", function () {
-      cell[i].style.backgroundColor = color;
-    });
+  if (color === "white") {
+    for (let i = 0; i < cell.length; i++) {
+      cell[i].addEventListener("mouseover", function () {
+        cell[i].style.backgroundColor = color;
+      });
+    }
+    changeMode(color);
+  } else if (color === "synth") {
+    for (let i = 0; i < cell.length; i++) {
+      cell[i].addEventListener("mouseover", function () {
+        cell[i].style.backgroundColor =
+          "rgb(" + Math.floor(Math.random() * 256) + "," + 56 + "," + 220 + ")";
+      });
+    }
+    changeMode(color);
   }
-  changeMode(color);
 }
-
 function reset() {
   while (main.firstChild) {
     main.removeChild(main.lastChild);
   }
 }
-
 document.getElementById("b16").addEventListener("click", function (event) {
   reset();
   makeGrid(16);
   changeSize(16);
   makeColor(currentColor);
 });
-
 document.getElementById("b64").addEventListener("click", function (event) {
   reset();
   makeGrid(64);
   changeSize(64);
   makeColor(currentColor);
 });
-
 document.getElementById("btns1").addEventListener("click", function (event) {
-    makeColor(rgb());
-    changeMode(rgb())
+  makeColor("synth");
 });
-
 document.getElementById("btns2").addEventListener("click", function (event) {
   makeColor("white");
-  changeMode("white");
 });
-
 document.getElementById("btns3").addEventListener("click", function (event) {
   reset();
   makeGrid(newSize);
   makeColor(currentColor);
 });
-
-window.onload = makeGrid(16), changeSize(16), makeColor("white");   
+(window.onload = makeGrid(16)), changeSize(16), makeColor("white");
