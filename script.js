@@ -47,21 +47,29 @@ document.getElementById("b16").addEventListener("click", function (event) {
   changeSize(16);
   makeColor(currentColor);
 });
-document.getElementById("b64").addEventListener("click", function (event) {
+document.getElementById("b48").addEventListener("click", function (event) {
   reset();
-  makeGrid(64);
-  changeSize(64);
+  makeGrid(48);
+  changeSize(48);
   makeColor(currentColor);
 });
 document.getElementById("btns1").addEventListener("click", function (event) {
-  makeColor("synth");
+    makeColor("synth");
+    btns1.classList.add('btns1active');
+    btns2.classList.remove('btns2active');
+    
 });
 document.getElementById("btns2").addEventListener("click", function (event) {
-  makeColor("white");
+    makeColor("white");
+    btns2.classList.add('btns2active');
+    btns1.classList.remove('btns1active');
 });
 document.getElementById("btns3").addEventListener("click", function (event) {
   reset();
   makeGrid(newSize);
   makeColor(currentColor);
 });
-(window.onload = makeGrid(16)), changeSize(16), makeColor("white");
+(window.onload = makeGrid(16)),
+  changeSize(16),
+  makeColor("white"),
+  btns2.classList.add("btns2active");

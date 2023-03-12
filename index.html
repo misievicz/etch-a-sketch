@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Etch-a-sketch</title>
@@ -8,28 +9,26 @@
   <meta name="decription" content="">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
-<div class="master">
-  <div class="title">SKETCH.</div>
-  <div class="main">
-    <div class="btns-left">
-      <div class='grid-size'>GRID SIZE</div>
-      <div class="s16-64">
-        <input type="button" id='b16' value='16'/>
-        <input type="button" id='b64' value='64'/>
+  <div class="master">
+    <div class="title">SKETCH.</div>
+    <div class="main">
+      <div class="btns-left">
+        <div class='grid-size'>GRID SIZE</div>
+        <div class="s16-64">
+          <input type="button" id='b16' value='16'/>
+          <input type="button" id='b48' value='48'/>
+        </div>
+        <input type="button" id="btns1" value="SYNTH"/>
+        <input type="button" id="btns2" value="WHITE"/>
+        <input type="button" id="btns3" value="RESET"/>
       </div>
-   
-      <input type="button" id="btns1" value="SYNTH"/>
-      <input type="button" id="btns2" value="WHITE"/>
-      <input type="button" id="btns3" value="RESET"/>
+      <div class="main-container"></div>
+      <div class="btns-right"></div>
     </div>
-    <div class="main-container"></div>
-    <div class="btns-right"></div>
   </div>
-</div>
-
-
   <script src="script.js"></script>
 </body>
+
 </html>
